@@ -8,7 +8,9 @@ export const useViewportSize = () => {
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
         };
+
         handleResize();
+
         window.addEventListener("resize", handleResize);
 
         return () => {
