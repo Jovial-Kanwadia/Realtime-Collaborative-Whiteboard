@@ -1,8 +1,7 @@
-"use client"
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { FiChevronRight } from "react-icons/fi";
 import { HiOutlineDownload } from "react-icons/hi";
 import { ImExit } from "react-icons/im";

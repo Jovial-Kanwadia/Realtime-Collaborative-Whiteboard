@@ -1,7 +1,6 @@
-"use client"
 import { FormEvent, useEffect, useState } from "react";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 import { socket } from "@/common/lib/socket";
 import { useModal } from "@/common/recoil/modal";
@@ -15,9 +14,7 @@ const NameInput = () => {
   const [name, setName] = useState("");
 
   const router = useRouter();
-  const searchParams = useSearchParams();
-  // Get roomId from search parameters
-  const roomId = searchParams.get("roomId") || "";
+  const roomId = (router.query.roomId || "").toString();
 
   useEffect(() => {
     if (!roomId) return;

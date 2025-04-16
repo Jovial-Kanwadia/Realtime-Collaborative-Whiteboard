@@ -1,7 +1,6 @@
 import { useSetRecoilState } from "recoil";
 
 import { modalAtom } from "./modal.atom";
-import { JSX } from "react";
 
 const useModal = () => {
   const setModal = useSetRecoilState(modalAtom);

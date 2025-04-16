@@ -1,8 +1,7 @@
-"use client"
 import {
   createContext,
   Dispatch,
-  ReactNode,
+  ReactChild,
   RefObject,
   SetStateAction,
   useEffect,
@@ -37,7 +36,7 @@ export const roomContext = createContext<{
   >;
 }>(null!);
 
-const RoomContextProvider = ({ children }: { children: ReactNode }) => {
+const RoomContextProvider = ({ children }: { children: ReactChild }) => {
   const setRoom = useSetRoom();
   const { users } = useRoom();
   const { handleAddUser, handleRemoveUser } = useSetUsers();
@@ -116,14 +115,14 @@ const RoomContextProvider = ({ children }: { children: ReactNode }) => {
       value={{
         x,
         y,
-        bgRef: bgRef as RefObject<HTMLCanvasElement>,
-        undoRef: undoRef as RefObject<HTMLButtonElement>,
-        redoRef: redoRef as RefObject<HTMLButtonElement>,
-        canvasRef: canvasRef as RefObject<HTMLCanvasElement>,
+        bgRef,
+        undoRef,
+        redoRef,
+        canvasRef,
         setMoveImage,
         moveImage,
-        minimapRef: minimapRef as RefObject<HTMLCanvasElement>,
-        selectionRefs: selectionRefs as RefObject<HTMLButtonElement[]>,
+        minimapRef,
+        selectionRefs,
       }}
     >
       {children}

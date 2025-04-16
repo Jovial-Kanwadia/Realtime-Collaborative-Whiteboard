@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "Preserve",
+    "module": "commonjs",
     "outDir": "build",
     "target": "es2017",
     "isolatedModules": false,

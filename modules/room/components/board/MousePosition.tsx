@@ -1,4 +1,3 @@
-"use client"
 import { useRef } from "react";
 
 import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ const MousePosition = () => {
 
   const prevPosition = useRef({ x: 0, y: 0 });
 
-  const ref: any = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const { docX, docY } = useMouse(ref);
 

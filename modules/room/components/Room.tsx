@@ -11,11 +11,7 @@ import NameInput from "./NameInput";
 import ToolBar from "./toolbar/ToolBar";
 import UserList from "./UserList";
 
-interface RoomProps {
-  roomId?: string;
-}
-
-const Room = ({ roomId }: RoomProps) => {
+const Room = () => {
   const room = useRoom();
 
   if (!room.id) return <NameInput />;
