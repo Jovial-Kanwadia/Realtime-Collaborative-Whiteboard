@@ -37,8 +37,7 @@
 ## 🚀 Tech Stack
 
 - **Frontend**
-  - [Next.js 15](https://nextjs.org/) - React framework
-  - [React 19](https://reactjs.org/) - UI library
+  - [Next.js](https://nextjs.org/) - React framework
   - [Recoil](https://recoiljs.org/) - State management
   - [Framer Motion](https://www.framer.com/motion/) - Animations
   - [TailwindCSS](https://tailwindcss.com/) - Styling
@@ -52,7 +51,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/digiboard.git
+   git clone https://github.com/Jovial-Kanwadia/digiboard.git
    cd digiboard
    ```
 
@@ -118,27 +117,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) team for the amazing framework
-- [Vercel](https://vercel.com/) for the deployment platform
-- [Socket.IO](https://socket.io/) for real-time capabilities
-- All contributors and users of this project
-
-## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/digiboard](https://github.com/yourusername/digiboard)
-
----
-
-<div align="center">
-  Made with ❤️ by [Your Name]
-</div>
 
