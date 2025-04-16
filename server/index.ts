@@ -2,7 +2,7 @@ import { createServer } from "http";
 
 import { } from "@/common/types/global";
 
-import express from "express";
+import express, { Request, Response } from "express";
 import next, { NextApiHandler } from "next";
 import { Server } from "socket.io";
 import { v4 } from "uuid";
@@ -162,7 +162,9 @@ nextApp.prepare().then(async () => {
         });
     });
 
-    app.all("*", nextHandler as unknown as express.RequestHandler);
+    app.use((req: Request, res: Response) => {
+        nextHandler(req as any, res as any);
+    });
 
     server.listen(port, () => {
         // eslint-disable-next-line no-console
