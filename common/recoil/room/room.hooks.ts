@@ -1,8 +1,9 @@
+"use client"
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 
 import { getNextColor } from "@/common/lib/getNextColor";
 
-import { DEFAULT_ROOM, roomAtom } from "./room.atom";
+import { DEFAULT_ROOM, roomAtom } from "@/common/recoil/room/room.atom";
 
 export const useRoom = () => {
   const room = useRecoilValue(roomAtom);

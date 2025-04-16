@@ -1,59 +1,42 @@
-// common/components/modal/components/ModalManager.tsx
-"use client";
-
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useModal } from "@/app/providers";
+import { useModalContext, BaseModalProps } from "@/app/contexts/ModalContext";
 import Portal from "@/common/components/portal/components/Portal";
 import {
   bgAnimation,
   modalAnimation,
 } from "@/common/components/modal/animations/ModalManager.animations";
 
-const ModalManager = () => {
-  const { opened, modal, closeModal } = useModal();
-  const [portalNode, setPortalNode] = useState<HTMLElement>();
+export default function ModalManager() {
+  const { isOpen, component: Component, props, closeModal } = useModalContext();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!portalNode) {
-      const node = document.getElementById("portal");
-      if (node) setPortalNode(node);
-      return;
-    }
+    setMounted(true);
+  }, []);
 
-    if (opened) {
-      portalNode.style.pointerEvents = "all";
-    } else {
-      portalNode.style.pointerEvents = "none";
-    }
-  }, [opened, portalNode]);
+  if (!mounted) return null;
 
   return (
     <Portal>
-      <motion.div
-        className="absolute z-40 flex min-h-full w-full items-center justify-center bg-black/80"
-        onClick={closeModal}
-        variants={bgAnimation}
-        initial="closed"
-        animate={opened ? "opened" : "closed"}
-      >
-        <AnimatePresence>
-          {opened && (
+      <AnimatePresence>
+        {isOpen && Component && (
+          <>
             <motion.div
-              variants={modalAnimation}
-              initial="closed"
-              animate="opened"
-              exit="exited"
-              onClick={(e) => e.stopPropagation()}
-              className="p-6"
+              {...bgAnimation}
+              className="fixed inset-0 z-50 bg-black/60"
+              onClick={closeModal}
+            />
+            <motion.div
+              {...modalAnimation}
+              className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2"
             >
-              {modal}
+              <Component {...props as BaseModalProps} onClose={closeModal} />
             </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </Portal>
   );
-};
+}
 
-export default ModalManager;

@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digiboard - Real-time Collaborative Whiteboard
 
-## Getting Started
+<div align="center">
+  <img src="public/vercel.svg" alt="Digiboard Logo" width="200"/>
+  <p><strong>A powerful, real-time collaborative whiteboard application built with Next.js and Socket.IO</strong></p>
+</div>
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Real-time Collaboration**
+  - Multiple users can draw simultaneously
+  - Live cursor tracking
+  - Real-time chat functionality
+  - User presence indicators
+
+- **Rich Drawing Tools**
+  - Multiple shapes (line, circle, rectangle)
+  - Image support (paste or upload)
+  - Custom color picker
+  - Adjustable line width
+  - Eraser tool
+  - Selection tool
+
+- **Advanced Canvas Features**
+  - Infinite canvas with pan and zoom
+  - Minimap navigation
+  - Undo/Redo functionality
+  - Background grid options
+
+- **Modern UI/UX**
+  - Responsive design
+  - Dark mode support
+  - Intuitive toolbar
+  - Toast notifications
+  - Modal system
+
+## 🚀 Tech Stack
+
+- **Frontend**
+  - [Next.js 15](https://nextjs.org/) - React framework
+  - [React 19](https://reactjs.org/) - UI library
+  - [Recoil](https://recoiljs.org/) - State management
+  - [Framer Motion](https://www.framer.com/motion/) - Animations
+  - [TailwindCSS](https://tailwindcss.com/) - Styling
+
+- **Backend**
+  - [Express](https://expressjs.com/) - Node.js web framework
+  - [Socket.IO](https://socket.io/) - Real-time communication
+  - [TypeScript](https://www.typescriptlang.org/) - Type safety
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/digiboard.git
+   cd digiboard
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+
+## 🏗️ Project Structure
+
+```
+digiboard/
+├── app/                    # Next.js app directory
+│   ├── [roomId]/          # Dynamic room routes
+│   ├── contexts/          # React contexts
+│   └── layout.tsx         # Root layout
+├── common/                # Shared utilities
+│   ├── components/        # Reusable components
+│   ├── constants/         # Global constants
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions
+│   └── types/            # TypeScript types
+├── modules/               # Feature modules
+│   ├── home/             # Home page module
+│   └── room/             # Whiteboard room module
+├── public/               # Static assets
+└── server/               # Backend server code
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project can be configured through various configuration files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `next.config.ts` - Next.js configuration
+- `tsconfig.json` - TypeScript configuration
+- `postcss.config.mjs` - PostCSS configuration
+- `eslint.config.mjs` - ESLint configuration
 
-## Learn More
+## 🚥 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) team for the amazing framework
+- [Vercel](https://vercel.com/) for the deployment platform
+- [Socket.IO](https://socket.io/) for real-time capabilities
+- All contributors and users of this project
+
+## 📧 Contact
+
+Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+
+Project Link: [https://github.com/yourusername/digiboard](https://github.com/yourusername/digiboard)
+
+---
+
+<div align="center">
+  Made with ❤️ by [Your Name]
+</div>
+
