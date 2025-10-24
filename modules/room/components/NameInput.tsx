@@ -59,9 +59,9 @@ const NameInput = () => {
       className="my-24 flex flex-col items-center"
       onSubmit={handleJoinRoom}
     >
-      <h1 className="text-5xl font-extrabold leading-tight sm:text-extra">
+      {/* <h1 className="text-5xl font-extrabold leading-tight sm:text-extra">
         Collabio
-      </h1>
+      </h1> */}
       <h3 className="text-xl sm:text-2xl">Real-time whiteboard</h3>
 
       <div className="mt-10 mb-3 flex flex-col gap-2">
